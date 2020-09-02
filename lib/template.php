@@ -7,6 +7,8 @@ class Template
     //vars
     protected $vars;
 
+    
+
    public  function __construct($template)
     {
        $this->template=$template;

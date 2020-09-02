@@ -16,6 +16,7 @@ class DataBase
          $options=array(PDO::ATTR_PERSISTENT=>true,
          PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
          $this->connect($dsn,$options);
+         $this->deleteTables();
          $this->createTables();
          $this->insertData();
     
@@ -54,7 +55,7 @@ class DataBase
     function resultSet()
     {
         $this->execute();
-        $this->stmt->fetchAll(PDO::FETCH_OBJ);
+       return  $this->stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
     function insertData()
@@ -62,7 +63,7 @@ class DataBase
         $this->query('INSERT INTO public.categories(
             id, name)
             VALUES (1,   \'Developement \');');
-            
+            $this->execute();
                 $this->query('INSERT INTO public.jobs(
                     job_user, salary, job_title, id, 
                     description, company, category_id, location)
@@ -99,5 +100,11 @@ class DataBase
         ');
 
         
+    }
+
+    function deleteTables()
+    {
+        $this->dbh->exec('DROP TABLE IF  EXISTS public.jobs');
+        $this->dbh->exec('DROP TABLE IF  EXISTS public.categories');
     }
 }

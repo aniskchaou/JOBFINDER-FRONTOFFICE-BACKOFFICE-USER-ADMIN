@@ -1,38 +1,44 @@
 <?php include_once 'include/header.php' ?>
 <body>
   <?php include_once 'include/nav.php'; ?>
-
+ 
 <main role="main">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
+  
+  <div class="container">
+
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3">Hello, world!</h1>
-      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      <h2 class="display-3">Find A Job </h2>
+      <form action="index.php">
+      <select name="category" class="form-control">
+        <option value="-1">Choose Category</option>
+        <?php   foreach($categories as $category): ?>
+        <option value="<?php echo $category->id  ?>"><?php echo $category->name  ?></option>
+        <?php   endforeach;          ?>
+        </select>
+        <br/>
+        <input type="submit" class="btn btn-primary btn-lg" value="Find"/>
+      </form>
+     
     </div>
   </div>
 
-  <div class="container">
+
+
+
     <!-- Example row of columns -->
+    <?php   foreach($jobs as $job): ?>
     <div class="row">
       <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <h2><?php echo $job->job_title; ?></h2>
+        <p><?php echo $job->description; ?></p>
         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
       </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-      </div>
+     
     </div>
-
+<?php   endforeach;          ?>
     <hr>
 
   </div> <!-- /container -->
