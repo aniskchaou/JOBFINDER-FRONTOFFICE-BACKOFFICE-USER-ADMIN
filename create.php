@@ -1,4 +1,6 @@
 <?php
+
+//initialisations
 include_once 'config/init.php';
 require_once 'lib/Job.php';
 require_once 'lib/Category.php';
@@ -6,7 +8,12 @@ require_once 'lib/DataBase.php';
 
 $template = new Template('templates/new-job.php');
 $job=new Job;
+$template->title="create Job";
+//get all categories
+$category=new Category;
+$template->categories=$category->fetchAll();
 
+//create a job
 if(isset($_POST['submit']))
 {
     $data=array();
@@ -24,11 +31,6 @@ if(isset($_POST['submit']))
     redirect("index.php", false);
    
 }
-
-
-$category=new Category;
-$template->categories=$category->fetchAll();
-
 
 
 echo $template;

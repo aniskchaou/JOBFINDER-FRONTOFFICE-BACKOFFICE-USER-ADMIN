@@ -41,21 +41,21 @@ class Job
 
     function create($data)
     {
-        print_r($data);
+    
         try{
             $this->db->query('INSERT INTO public.jobs(
                 job_user, salary, job_title, 
                 description, company,email, category_id, location)
                 VALUES (:job_user, :salary, :job_title, :description, :company,:email, :category_id, :location);');        
-       $this->db->bind(":job_user",$data['job_user']);
-       $this->db->bind(":salary",$data['salary']);
-       $this->db->bind(":job_title",$data['job_title']);
-       $this->db->bind(":description",$data['description']);
-       $this->db->bind(":company",$data['company']);
-       $this->db->bind(":email",$data['email']);
-       $this->db->bind(":category_id",$data['category_id']);
-       $this->db->bind(":location",$data['location']);
-       $this->db->execute();
+            $this->db->bind(":job_user",$data['job_user']);
+            $this->db->bind(":salary",$data['salary']);
+            $this->db->bind(":job_title",$data['job_title']);
+            $this->db->bind(":description",$data['description']);
+            $this->db->bind(":company",$data['company']);
+            $this->db->bind(":email",$data['email']);
+            $this->db->bind(":category_id",$data['category_id']);
+            $this->db->bind(":location",$data['location']);
+            $this->db->execute();
         }catch(PDOEXception $e)
         {
            echo $e->getMessage();

@@ -8,6 +8,7 @@ class Category{
         $this->db=new DataBase;
     }
     
+    //get all
     public function fetchAll()
     {
       $this->db->query('SELECT * FROM public.categories ORDER BY id ASC');

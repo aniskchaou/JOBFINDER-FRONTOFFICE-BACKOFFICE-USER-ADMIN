@@ -4,7 +4,6 @@
  <br><br><br><br>
 <main role="main">
 
-  <!-- Main jumbotron for a primary marketing message or call to action -->
   
   <div class="container">
   <h2 class="page-header">Create A Job </h2>
@@ -63,7 +62,7 @@
 
   <br><br>
   <a href="index.php">Back</a>
-  </div> <!-- /container -->
+  </div> 
 
 </main>
 </body>
