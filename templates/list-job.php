@@ -7,7 +7,7 @@
   <!-- Main jumbotron for a primary marketing message or call to action -->
   
   <div class="container">
-
+ 
   <div class="jumbotron">
     <div class="container">
       <h2 class="display-3">Find A Job </h2>
@@ -25,6 +25,32 @@
     </div>
   </div>
 
+  
+    <?php
+   if ( isset($_SESSION['msg'] )) {
+   ?>
+    <div class="alert alert-success alert-dismissible fade show">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Success!</strong> 
+    <?php 
+    print $_SESSION['msg'];
+    unset( $_SESSION['msg']);
+    ?>
+    </div>
+
+<?php
+    }
+  ?>
+  
+  <script>
+$(".alert").delay(4000).slideUp(200, function() {
+    $(this).alert('close');
+});
+  </script>
+ 
+  
+  
+  
 
 
 

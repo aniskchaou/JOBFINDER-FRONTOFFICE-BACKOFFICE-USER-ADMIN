@@ -2,6 +2,8 @@
 //config
 require_once 'config.php';
 
+
+session_start();
 //load template
 
 spl_autoload_register(function($class) {

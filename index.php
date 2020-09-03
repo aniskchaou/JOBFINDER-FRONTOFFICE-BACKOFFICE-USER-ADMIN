@@ -20,6 +20,7 @@ $del_id=isset($_GET['del_id'])?$_GET['del_id']:null;
 if($del_id)
 {
     $job->delete($del_id);
+    $_SESSION['msg']="Your job has been deleted !";
     redirect("index.php", false);
 }
 

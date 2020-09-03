@@ -20,6 +20,7 @@ if(isset($_POST['submit']))
     $data['email']=$_POST['email'];
 
     $job->create($data);
+    $_SESSION['msg']="Your job has been added !";
     redirect("index.php", false);
    
 }

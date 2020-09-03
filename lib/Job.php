@@ -35,7 +35,7 @@ class Job
        WHERE id =:id ORDER BY id ASC');
        $this->db->bind(":id",$id);
        $result=$this->db->getOne();
-
+       
       return $result;
     }
 
@@ -74,11 +74,9 @@ class Job
 
     function update($id,$data)
     {
-        $this->query('INSERT INTO public.categories(
-            id, name)
-            VALUES (1,   \'Developement \');');
-            $this->execute();
-                $this->query('UPDATE public.jobs
+        
+          
+                $this->db->query('UPDATE public.jobs
                 SET job_user=:job_user, salary=:salary, job_title=:job_title,  description=:description, company=:company,
                  email=:email, category_id=:category_id, location=:location
                 WHERE id=:id;');        
@@ -91,7 +89,7 @@ class Job
            $this->db->bind(":category_id",$data['category_id']);
            $this->db->bind(":location",$data['location']);
            $this->db->bind(":id",$id);
-           $this->execute();
+           $this->db->execute();
     }
 
 }
