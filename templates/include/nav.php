@@ -10,7 +10,7 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Create Job</a>
+        <a class="nav-link" href="create.php">Create Job</a>
       </li>
       
     </ul>

@@ -4,7 +4,7 @@ require_once 'lib/Job.php';
 require_once 'lib/Category.php';
 require_once 'lib/DataBase.php';
 
-$template = new Template('templates/front.php');
+$template = new Template('templates/list-job.php');
 $job=new Job;
 $category_param=isset($_GET['category'])?$_GET['category']:null;
 if($category_param)

@@ -34,7 +34,7 @@
       <div class="col-md-4">
         <h2><?php echo $job->job_title; ?></h2>
         <p><?php echo $job->description; ?></p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="job.php?id=<?php echo $job->id;  ?>" role="button">View details &raquo;</a></p>
       </div>
      
     </div>

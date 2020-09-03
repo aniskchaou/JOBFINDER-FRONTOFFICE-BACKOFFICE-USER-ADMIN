@@ -44,7 +44,7 @@ class DataBase
     
     function bind($param,$value)
     {
-        $this->stmt->binValue($param,$value);
+        $this->stmt->bindValue($param,$value);
     }
 
     function execute()
@@ -58,6 +58,12 @@ class DataBase
        return  $this->stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
+    function getOne()
+    {
+        $this->execute();
+       return  $this->stmt->fetch(PDO::FETCH_OBJ);
+    }
+
     function insertData()
     {
         $this->query('INSERT INTO public.categories(
@@ -66,8 +72,8 @@ class DataBase
             $this->execute();
                 $this->query('INSERT INTO public.jobs(
                     job_user, salary, job_title, id, 
-                    description, company, category_id, location)
-                    VALUES (\'d\', \'d\', \'d\', 1, \'d\', \'d\', 1, \'d\');');        
+                    description, company,email, category_id, location)
+                    VALUES (\'d\', \'d\', \'d\', 1, \'d\', \'d\',\'d\', 1, \'d\');');        
             $this->execute();
     }
     function createTables()
@@ -77,9 +83,10 @@ class DataBase
             job_user character varying(255),
             salary character varying(255),
             job_title character varying(255),
-            id bigint,
+            id bigint AUTO_INCREMENT,
             description character varying(255),
             company character varying(255),
+            email character varying(255),
             category_id bigint,
             location character varying(255),
             PRIMARY KEY (id)
@@ -107,4 +114,7 @@ class DataBase
         $this->dbh->exec('DROP TABLE IF  EXISTS public.jobs');
         $this->dbh->exec('DROP TABLE IF  EXISTS public.categories');
     }
+
+
+    
 }
