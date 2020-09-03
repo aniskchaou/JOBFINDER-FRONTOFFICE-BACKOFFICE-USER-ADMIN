@@ -16,6 +16,12 @@ if($category_param)
     $template->jobs=$job->fetchAll();
 }
 
+$del_id=isset($_GET['del_id'])?$_GET['del_id']:null;
+if($del_id)
+{
+    $job->delete($del_id);
+    redirect("index.php", false);
+}
 
 
 

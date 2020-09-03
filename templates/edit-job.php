@@ -9,7 +9,7 @@
   <div class="container">
   <h2 class="page-header">Create A Job </h2>
   
-  <form action="create.php" method="post">
+  <form action="edit.php?id=<?php echo $job->id;   ?>" method="post">
 
   <div class="form-group">
     <label >Company</label>
@@ -21,13 +21,7 @@
     <label >Job Title</label>
     <input type="text" class="form-control" name="jobtitle" >
   </div>
-
-  <div class="form-group">
-    <label >User</label>
-    <input type="text" class="form-control" name="jobuser" >
-  </div>
-
-
+  
   <div class="form-group">
   <label >Category</label>
   <select name="category" class="form-control">

@@ -17,6 +17,10 @@
   <li>Email : <?php echo $job->email;   ?></li>
   </ul>
   <br><br>
+  <div class="well">
+  <a href="edit.php?id=<?php echo $job->id; ?>">Edit</a>
+  <a href="index.php?del_id=<?php echo $job->id; ?>">Delete</a>
+  </div>
   <a href="index.php">Back</a>
   </div> <!-- /container -->
 

@@ -11,7 +11,10 @@ $id=isset($_GET['id'])?$_GET['id']:null;
     $template->title="All Jobs";
     $template->job=$job->getJobById($id);
 
-
+if(isset($_GET['del_id']))
+{
+$job->delete($_GET['del_id']);
+}
 
 $category=new Category;
 $template->categories=$category->fetchAll();

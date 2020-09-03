@@ -9,16 +9,18 @@ class DataBase
     private $dbh;
     private $error;
     private $stmt;
-
+    
+    
     public function __construct()
     {
          $dsn='pgsql:host='.$this->host.';dbname='.$this->dbname;
          $options=array(PDO::ATTR_PERSISTENT=>true,
          PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION);
          $this->connect($dsn,$options);
-         $this->deleteTables();
-         $this->createTables();
+       
+        $this->createTables();
          $this->insertData();
+         
     
     }
 
@@ -65,16 +67,36 @@ class DataBase
     }
 
     function insertData()
-    {
+    { 
         $this->query('INSERT INTO public.categories(
-            id, name)
-            VALUES (1,   \'Developement \');');
+            name)
+            VALUES (   \'Developement \');');
             $this->execute();
+            if($this->isDBEmpty())
+            {
                 $this->query('INSERT INTO public.jobs(
-                    job_user, salary, job_title, id, 
+                    job_user, salary, job_title,  
                     description, company,email, category_id, location)
-                    VALUES (\'d\', \'d\', \'d\', 1, \'d\', \'d\',\'d\', 1, \'d\');');        
-            $this->execute();
+                    VALUES (\'d\', \'d\', \'d\',  \'d\', \'d\',\'d\', 1, \'d\')
+                     ');        
+                 $this->execute();
+            }
+                
+    }
+
+    function isDBEmpty()
+    {
+        $stmt = $this->dbh->query('SELECT * FROM public.jobs
+        ORDER BY id ASC ');
+        print_r($stmt );
+        $row_count = $stmt->rowCount();
+
+        if($row_count==0){
+          return true;
+        }else
+        {
+          return false;
+        }
     }
     function createTables()
     {
@@ -83,7 +105,7 @@ class DataBase
             job_user character varying(255),
             salary character varying(255),
             job_title character varying(255),
-            id bigint AUTO_INCREMENT,
+            id serial,
             description character varying(255),
             company character varying(255),
             email character varying(255),
@@ -97,7 +119,7 @@ class DataBase
 
         $this->dbh->exec('CREATE TABLE IF NOT EXISTS public.categories
         (
-            id bigint,
+            id serial,
             name character varying(255),
             PRIMARY KEY (id)
         );
