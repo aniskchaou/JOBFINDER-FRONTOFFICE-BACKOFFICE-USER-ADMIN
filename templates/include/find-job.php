@@ -9,7 +9,7 @@
         <?php   endforeach;          ?>
         </select>
         <br/>
-        <button type="submit" class="btn btn-primary btn-lg" ><i class="fas fa-search"></i> Search </button>
+        <button type="submit" class="btn btn-primary btn-lg" > Find </button>
       </form>
     </div>
 </div>
