@@ -7,7 +7,7 @@ session_start();
 
 //load template
 spl_autoload_register(function($class) {
-    include '../lib/'.$class.'.php';
+    include $class.'.php';
     });
 
 ?>
