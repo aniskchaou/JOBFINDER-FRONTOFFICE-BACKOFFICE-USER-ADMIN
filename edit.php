@@ -13,6 +13,7 @@ $job=new Job;
 $id=isset($_GET['id'])?$_GET['id']:null;
 $template->job=$job->getJobById($id);
 $template->title="Edit Job";
+
 //get all categories
 $category=new Category;
 $template->categories=$category->fetchAll();
