@@ -1,7 +1,7 @@
 <?php include_once 'include/header.php' ?>
 <body>
   <?php include_once 'include/nav.php'; ?>
- <br><br><br><br>
+
 <main role="main">
 
   

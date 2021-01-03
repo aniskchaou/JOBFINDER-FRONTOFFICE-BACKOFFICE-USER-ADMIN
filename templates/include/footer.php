@@ -1,8 +1,61 @@
-<footer class="container">
-  <p>Developed by Anis KCHAOU</p>
-<p>Source code : <a href="https://github.com/aniskchaou/JOBFINDER-PHP">https://github.com/aniskchaou/JOBFINDER-PHP</a></p>
-<p>Contact : kchaouanis26@gmail.com</p>
-</footer>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script></body>
-</html>
+
+
+
+<footer>
+			<div class="container">
+				<div class="col-md-3 col-sm-6">
+					<h4>Featured Job</h4>
+					<ul>
+						<li><a href="#">Browse Jobs</a></li>
+						<li><a href="#">Premium MBA Jobs</a></li>
+						<li><a href="#">Access Database</a></li>
+						<li><a href="#">Manage Responses</a></li>
+						<li><a href="#">Report a Problem</a></li>
+						<li><a href="#">Mobile Site</a></li>
+						<li><a href="#">Jobs by Skill</a></li>
+					</ul>
+				</div>
+				
+				<div class="col-md-3 col-sm-6">
+					<h4>Latest Job</h4>
+					<ul>
+						<li><a href="#">Browse Jobs</a></li>
+						<li><a href="#">Premium MBA Jobs</a></li>
+						<li><a href="#">Access Database</a></li>
+						<li><a href="#">Manage Responses</a></li>
+						<li><a href="#">Report a Problem</a></li>
+						<li><a href="#">Mobile Site</a></li>
+						<li><a href="#">Jobs by Skill</a></li>
+					</ul>
+				</div>
+				
+				<div class="col-md-3 col-sm-6">
+					<h4>Reach Us</h4>
+					<address>
+					<ul>
+					<li>1201, Murakeu Market, QUCH07<br>
+					United Kingdon</li>
+					<li>Email: Support@job.com</li>
+					<li>Call: 044 123 458 65879</li>
+					<li>Skype: job@skype</li>
+					<li>FAX: 123 456 85</li>
+					</ul>
+					</address>
+				</div>
+				
+				<div class="col-md-3 col-sm-6">
+					<h4>Drop A Mail</h4>
+					<form>
+						<input type="text" class="form-control input-lg" placeholder="Your Name">
+						<input type="text" class="form-control input-lg" placeholder="Email...">
+						<textarea class="form-control" placeholder="Message"></textarea>
+						<button type="submit" class="btn btn-primary">Login</button>
+					</form>
+				</div>
+				
+				
+			</div>
+			<div class="copy-right">
+			 <p>Developed by Anis KCHAOU</a></p>
+			</div>
+		</footer>

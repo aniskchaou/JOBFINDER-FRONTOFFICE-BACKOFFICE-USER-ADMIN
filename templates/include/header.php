@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+ <!-- <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -14,7 +14,7 @@
   
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-    <!-- Bootstrap core CSS -->
+   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 
@@ -36,6 +36,22 @@
         }
       }
     </style>
-    <!-- Custom styles for this template -->
+   
     <link href="jumbotron.css" rel="stylesheet">
-  </head>
+  </head>-->
+
+  <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Jober Desk | Responsive Job Portal Template</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+        <!-- All Plugin Css --> 
+		<link rel="stylesheet" href="templates/dist/css/plugins.css">
+		
+		<!-- Style & Common Css --> 
+		<link rel="stylesheet" href="templates/dist/css/common.css">
+        <link rel="stylesheet" href="templates/dist/css/main.css">
+
+    </head>
